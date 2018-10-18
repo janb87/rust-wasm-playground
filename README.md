@@ -30,7 +30,7 @@ cargo update
 wasm-pack build
 ```
 
-2. Plain
+2. Plain / backend
 
 ```bash
 cargo new --lib utils
@@ -45,9 +45,18 @@ crate-type = ["cdylib"]
 
 ## Build
 
+1. Plain 
+
 ```
 cd utils
 wasm-pack build
+```
+
+2. backend
+
+```
+cd backend/crate
+cargo build --target wasm32-unknown-unknown --release
 ```
 
 ## Start 
@@ -64,4 +73,12 @@ npm start
 ```
 cd utils
 npx webpack-dev-server
+```
+
+3. backend
+
+```
+cd backend
+nvm use 10
+node --experimental-modules --loader @wasm-tool/node index.mjs
 ```
