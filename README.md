@@ -17,7 +17,7 @@ cargo install https
 1. Webpack
 
 ```bash
-cd rust-webpack
+cd webpack
 nvm use 10
 npm init rust-webpack
 ```
@@ -27,6 +27,7 @@ If you get a [compiler error](https://github.com/rustwasm/rust-webpack-template/
 ```
 cd crate
 cargo update
+wasm-pack build
 ```
 
 2. Plain
@@ -50,6 +51,15 @@ wasm-pack build
 ```
 
 ## Start 
+
+1. Webpack
+
+```
+cd webpack
+npm start
+```
+
+2. Plain
 
 ```
 cd utils
