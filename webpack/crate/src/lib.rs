@@ -1,5 +1,3 @@
-#![feature(use_extern_macros)]
-
 #[macro_use]
 extern crate cfg_if;
 
@@ -49,12 +47,20 @@ extern "C" {
     fn set_inner_html(this: &Element, html: &str);
     #[wasm_bindgen(method, js_name = appendChild)]
     fn append_child(this: &Element, other: Element);
+
+    #[wasm_bindgen(js_namespace = console)]
+    fn log(msg: &str);
+}
+
+macro_rules! log {
+    ($($t:tt)*) => (log(&format!($($t)*)))
 }
 
 // Called by our JS entry point to run the example
 #[wasm_bindgen]
 pub fn run() {
     let val = document.createElement("p");
+    log!("Wasm started {}!", "successfully");
     val.set_inner_html("Hello World!");
     document.body().append_child(val);
 }
