@@ -55,6 +55,6 @@ extern "C" {
 #[wasm_bindgen]
 pub fn run() {
     let val = document.createElement("p");
-    val.set_inner_html("Hello from Rust, WebAssembly, and Webpack!");
+    val.set_inner_html("Hello World!");
     document.body().append_child(val);
 }
