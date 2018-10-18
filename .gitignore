@@ -1,0 +1,4 @@
+node_modules
+target/
+wasm-pack.log
+utils.gc.wasm

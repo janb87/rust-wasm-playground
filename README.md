@@ -29,13 +29,12 @@ crate-type = ["cdylib"]
 
 ```
 cd utils
-cargo build --target wasm32-unknown-unknown --release
-wasm-gc target/wasm32-unknown-unknown/release/utils.wasm -o utils.gc.wasm
+wasm-pack build
 ```
 
 ## Start 
 
 ```
 cd utils
-http
+npx webpack-dev-server
 ```

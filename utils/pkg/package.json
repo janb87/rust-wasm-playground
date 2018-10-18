@@ -1,0 +1,15 @@
+{
+  "name": "utils",
+  "collaborators": [
+    "Jan Bevers"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "utils_bg.wasm",
+    "utils.js",
+    "utils.d.ts"
+  ],
+  "module": "utils.js",
+  "types": "utils.d.ts",
+  "sideEffects": "false"
+}
